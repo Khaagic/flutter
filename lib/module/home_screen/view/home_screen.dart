@@ -11,6 +11,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+  //   HomeController homeController = Get.put(HomeController());
+
     HomeController homeController = Get.put(HomeController());
 
     return Scaffold(
@@ -146,24 +149,59 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
 
-              // List product
-
-              Obx(() {
+            //  List product
+              
+              Obx((){
                 return ListView.separated(
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: homeController.listProductModel.length,
-                  itemBuilder: (context, index) {
-                    final product = homeController.listProductModel[index];
-                    return CardLlist(
-                      image: product.image,
-                      title: product.title,
-                      price: product.price,
-                    );
-                  },
-                  separatorBuilder: (_, __) => SizedBox(height: 10),
+                    physics: NeverScrollableScrollPhysics(),
+                    itemCount: homeController.listProductModel.length,
+                    itemBuilder: (context, index){
+                      final product = homeController.listProductModel[index];
+                      return CardLlist(
+                          image: product.image,
+                          title: product.title,
+                          price: product.price
+                      );
+                    },
+                    separatorBuilder: (_,__) => SizedBox(height: 4,),
+
                 );
               }),
+
+              // Obx((){
+              //   return ListView.separated(
+              //     shrinkWrap: true,
+              //     physics: NeverScrollableScrollPhysics(),
+              //     itemCount: homeController.listProductModel.length,
+              //       itemBuilder: (context, index){
+              //         final product = homeController.listProductModel[index];
+              //         return CardLlist(
+              //             image: product.image,
+              //             title: product.title,
+              //             price: product.price,
+              //         );
+              //       },
+              //       separatorBuilder: (_, __) => SizedBox(height: 10,),
+              //   );
+              // }),
+
+              // Obx(() {
+              //   return ListView.separated(
+              //     shrinkWrap: true,
+              //     physics: NeverScrollableScrollPhysics(),
+              //     itemCount: homeController.listProductModel.length,
+              //     itemBuilder: (context, index) {
+              //       final product = homeController.listProductModel[index];
+              //       return CardLlist(
+              //         image: product.image,
+              //         title: product.title,
+              //         price: product.price,
+              //       );
+              //     },
+              //     separatorBuilder: (_, __) => SizedBox(height: 10),
+              //   );
+              // }),
 
 
 

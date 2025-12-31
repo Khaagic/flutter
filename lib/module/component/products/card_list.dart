@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test_app/core/route/app_route.dart';
 
 class CardLlist extends StatelessWidget {
   final String image;
@@ -21,7 +22,6 @@ class CardLlist extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               Text(title),
               Text(price),
             ],
@@ -30,9 +30,10 @@ class CardLlist extends StatelessWidget {
           // button shop
           Container(
             color: Colors.black,
-
             child: TextButton(
-              onPressed: (){},
+              onPressed: (){
+                Get.toNamed(AppRoutes.productDetail);
+              },
               child: Text("Shop",style: TextStyle(color: Colors.white), )),
           )
 

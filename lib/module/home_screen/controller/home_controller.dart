@@ -1,10 +1,71 @@
+// import 'package:get/get.dart';
+// import 'package:test_app/core/my_model_controller/my_model_comtroller.dart';
+// import 'package:test_app/data/model/product_model/product_model.dart';
+//
+// class HomeController extends GetxController {
+//
+//   var myModelComtroller = MyModelComtroller();
+//   RxList<ProductModel> listProductModel = <ProductModel>[].obs;
+//
+//   @override
+//   void onInit() {
+//     // TODO: implement onInit
+//     getDataModelController();
+//     super.onInit();
+//   }
+//
+//   void getDataModelController() async{
+//      var result = await myModelComtroller.getListProduct();
+//
+//     //  for( var item in result){
+//     //    //dynamic , we put all data type
+//     //    listProductModel.assignAll(ProductModel.fromJson(item));
+//     // }
+//
+//      listProductModel.assignAll(
+//        result.map((e) => ProductModel.fromJson(e)).toList(),
+//      );
+//   }
+//
+// }
+
+//============repeat
+//
+// import 'package:get/get.dart';
+// import 'package:test_app/core/my_model_controller/my_model_comtroller.dart';
+// import 'package:test_app/data/model/product_model/product_model.dart';
+//
+// class HomeController extends GetxController{
+//   var  myModelController = MyModelController();
+//   RxList<ProductModel> listProductModel =<ProductModel>[].obs;
+//
+//   @override
+//   void onInit() {
+//     // TODO: implement onInit
+//     getDataModelController();
+//     super.onInit();
+//   }
+//
+//   void getDataModelController() async{
+//     var result = await myModelController.getListProduct();
+//
+//     listProductModel.assignAll(
+//       result.map((e) => ProductModel.fromJson(e)).toList(),
+//     );
+//   }
+//
+// }
+
+
+//========== re-practice
+
 import 'package:get/get.dart';
 import 'package:test_app/core/my_model_controller/my_model_comtroller.dart';
 import 'package:test_app/data/model/product_model/product_model.dart';
 
-class HomeController extends GetxController {
+class HomeController extends GetxController{
 
-  var myModelComtroller = MyModelComtroller();
+  var myModelController = MyModelController();
   RxList<ProductModel> listProductModel = <ProductModel>[].obs;
 
   @override
@@ -15,16 +76,11 @@ class HomeController extends GetxController {
   }
 
   void getDataModelController() async{
-     var result = await myModelComtroller.getListProduct();
+    var result = await myModelController.getListproduct();
 
-    //  for( var item in result){
-    //    //dynamic , we put all data type
-    //    listProductModel.assignAll(ProductModel.fromJson(item));
-    // }
-
-     listProductModel.assignAll(
-       result.map((e) => ProductModel.fromJson(e)).toList(),
-     );
+    listProductModel.assignAll(
+      result.map((e) => ProductModel.fromJson(e)).toList(),
+    );
   }
 
 }

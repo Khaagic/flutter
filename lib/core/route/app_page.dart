@@ -3,6 +3,7 @@
 
 import 'package:get/get.dart';
 import 'package:test_app/core/route/app_route.dart';
+import 'package:test_app/module/component/product_detail/product_detail.dart';
 import 'package:test_app/module/home_screen/view/home_screen.dart';
 import 'package:test_app/module/login_screen/view/login_screen.dart';
 
@@ -14,6 +15,7 @@ class AppPages {
     GetPage(name: AppRoutes.home, page: () => const HomeScreen()),
     GetPage(name: AppRoutes.login, page: () =>  LoginScreen()),
     GetPage(name: AppRoutes.slashScreen, page: () => SlashScreen()),
+    GetPage(name: AppRoutes.productDetail, page: () => ProductDetail()),
 
 //    GetPage(
 //   name: AppRoutes.Carddetail,

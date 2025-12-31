@@ -10,7 +10,7 @@ class CardProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200,
+      width: 210,
       
       // color: const Color.fromARGB(255, 231, 220, 220),
       child: Column( 
@@ -23,8 +23,7 @@ class CardProduct extends StatelessWidget {
             child: Container(
               child: Image.asset(imag, width: 200, height: 200, fit: BoxFit.cover,)),
           ),
-          
-      
+
           // title
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -35,7 +34,6 @@ class CardProduct extends StatelessWidget {
           ),
          
           // subtitle
-          
         ],
       ),
     );
