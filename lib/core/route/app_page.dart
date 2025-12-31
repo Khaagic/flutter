@@ -3,9 +3,11 @@
 
 import 'package:get/get.dart';
 import 'package:test_app/core/route/app_route.dart';
-import 'package:test_app/module/login/login_screen.dart';
+import 'package:test_app/module/home_screen/view/home_screen.dart';
+import 'package:test_app/module/login_screen/view/login_screen.dart';
+
 import 'package:test_app/module/slash_screen/slash_screen.dart';
-import 'package:test_app/module/view/home_screen.dart';
+
 
 class AppPages {
   static final pages = [

@@ -6,7 +6,7 @@ class MyModelComtroller {
       {
         "title": "Chair",
         "icon": ImageRes.imgAssets,
-        "price": "200"
+        "price": "168"
       },
       {
         "title": "Table",
@@ -15,12 +15,12 @@ class MyModelComtroller {
       },
       {
         "title": "Chair 2",
-        "icon": ImageRes.imgAssets,
-        "price": "400"
+        "icon": ImageRes.imgTwo,
+        "price": "40000"
       },
       {
         "title": "Chair 3",
-        "icon": ImageRes.imgAssets,
+        "icon": ImageRes.imgTwo,
         "price": "500"
       },
       {

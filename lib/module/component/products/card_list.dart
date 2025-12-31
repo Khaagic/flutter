@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CardLlist extends StatelessWidget {
   final String image;
@@ -20,25 +21,25 @@ class CardLlist extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              
+
               Text(title),
               Text(price),
             ],
           ),
-          
+
           // button shop
           Container(
             color: Colors.black,
-           
-            child: TextButton( 
-              onPressed: (){}, 
+
+            child: TextButton(
+              onPressed: (){},
               child: Text("Shop",style: TextStyle(color: Colors.white), )),
           )
 
         ],
       ),
-      
-      
+
+
 
     );
   }
