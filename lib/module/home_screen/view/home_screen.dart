@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:test_app/core/my_model_controller/my_model_comtroller.dart';
 import 'package:test_app/module/component/products/card_list.dart';
 import 'package:test_app/module/component/products/card_pro.dart';
 import 'package:test_app/module/home_screen/controller/home_controller.dart';
+import 'package:test_app/module/home_screen/controller/news_controller.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -12,9 +14,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-  //   HomeController homeController = Get.put(HomeController());
 
     HomeController homeController = Get.put(HomeController());
+
+    NewsController newsController = Get.put(NewsController());
 
     return Scaffold(
       // appBar: AppBar(
@@ -117,7 +120,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
 
               // Trending & show more
               Column(
@@ -130,7 +133,7 @@ class HomeScreen extends StatelessWidget {
                           "Trending",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 20,
+                            fontSize: 20.sp,
                           ),
                         ),
                       ),
@@ -139,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           TextButton(
                             onPressed: () {},
-                            child: Text('Show more'),
+                            child: Text('Show more',style: TextStyle(fontSize: 13.sp),),
                           ),
                           Icon(Icons.arrow_circle_right),
                         ],

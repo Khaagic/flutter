@@ -48,6 +48,8 @@ class ProductModel {
   late String title;
   late String price;
 
+
+
   ProductModel.fromJson(Map json){
     image = json["icon"] ?? "";
     title = json["title"] ?? "";

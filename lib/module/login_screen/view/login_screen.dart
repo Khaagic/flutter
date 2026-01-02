@@ -11,24 +11,26 @@ class LoginScreen extends StatelessWidget {
       // backgroundColor: Color.fromARGB(255, 63, 24, 114),
       body: Column(
         children: [
+          SizedBox(height: 30,),
           Container(
             width: 430,
             height: 250,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   padding: const EdgeInsets.all(18),
                   child: Row(
                     children: [
-                     
-                      SizedBox(width: 20),
+                      SizedBox(width: 10),
                       Center(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(90),
                           child: Image.network(
                             'https://i.pinimg.com/736x/3f/5a/d8/3f5ad816179850d23695910e906554a7.jpg',
-                            width: 170,
-                            height: 170,
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            height: MediaQuery.of(context).size.height * 0.9,
+                            // height: 170,
                             fit: BoxFit.cover,
                                         
                             // loadingBuilder: (context, child, progress) {
@@ -38,6 +40,7 @@ class LoginScreen extends StatelessWidget {
                             // errorBuilder: (context, error, stackTrace) {
                             //   return const Icon(Icons.error, size: 80);
                             // },
+
                           ),
                         ),
                       ),

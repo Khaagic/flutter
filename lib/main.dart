@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:test_app/core/route/app_page.dart';
 import 'package:test_app/core/route/app_route.dart';
@@ -23,11 +24,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SlashScreen(),
-      initialRoute: AppRoutes.slashScreen,
-      getPages: AppPages.pages,
+
+    // ======== add responsive
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SlashScreen(),
+        initialRoute: AppRoutes.slashScreen,
+        getPages: AppPages.pages,
+      ),
     );
   }
 }
